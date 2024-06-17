@@ -2,8 +2,8 @@ import React from 'react'
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import NavigationMenu from './components/NavigationMenu'
-import Home from "./pages/Home"
-import Tasks from "./pages/Tasks"
+import HomePage from "./pages/HomePage"
+import ProjectPage from "./pages/ProjectPage"
 
 const App = () => {
     
@@ -11,8 +11,8 @@ const App = () => {
         <div className="App">
             <NavigationMenu />
             <Routes>
-                <Route path="/" element={<Home/>}/>
-                <Route path="/tasks" element={<Tasks/>}/>
+                <Route path="/" element={<HomePage/>}/>
+                <Route path="/project" element={<ProjectPage/>}/>
             </Routes>
         </div>
     )

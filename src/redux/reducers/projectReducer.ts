@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-export interface Project {
+export interface IProject {
     id: number,
     name: string,
     description: string,
@@ -9,7 +9,7 @@ export interface Project {
 }
 
 interface InitialProjectState {
-    projects: Project[]
+    projects: IProject[]
 }
 
 const initialState: InitialProjectState = {
