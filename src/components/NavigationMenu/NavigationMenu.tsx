@@ -11,14 +11,23 @@ const NavigationMenu = () => {
 
     const NavItem: React.FC<NavItemProps> = ({to, name}) => {
         return (
-            <Button style={{width: 50, height: "100%"}}>
+            <Button style={{
+                width: 150,
+                height: "70%",
+                backgroundColor: "#ECF0F1",
+                borderRadius: 15,
+                marginLeft: 10
+            }}>
                 <Link to={`/${to}`}>{name}</Link>
             </Button>
         )
     }
 
     return (
-        <header className={style.header}>
+        <header className={style.header} style={{
+            display: "flex",
+            alignItems: "center"
+        }}>
             <NavItem to={""} name={"Home"}/>
             <NavItem to={"tasks"} name={"Tasks"}/>
         </header>
