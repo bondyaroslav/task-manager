@@ -14,11 +14,11 @@ export const taskApi = createApi({
         getAllTasks: builder.query({
             query: () => 'task'
         }),
-        getTargetTask: builder.query({
+        getTasksFromTargetProject: builder.query({
             query: ({ id, ...task }) => ({
                 url: `task/${id}`,
                 method: 'GET',
-                body: task
+                params: task
             })
         }),
         updateTask: builder.mutation({
@@ -40,7 +40,7 @@ export const taskApi = createApi({
 export const {
     useCreateTaskMutation,
     useGetAllTasksQuery,
-    useGetTargetTaskQuery,
+    useGetTasksFromTargetProjectQuery,
     useUpdateTaskMutation,
     useDeleteTaskMutation
 } = taskApi
