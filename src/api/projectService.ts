@@ -22,6 +22,12 @@ export const projectApi = createApi({
         getProjects: builder.query({
             query: () => 'project'
         }),
+        getTargetProject: builder.query({
+            query: ({ id, ...project }) => ({
+                url: `project/${id}`,
+                method: 'GET',
+            })
+        }),
         updateProject: builder.mutation({
             query: ({ id, ...project }) => ({
                 url: `project/${id}`,
@@ -41,6 +47,7 @@ export const projectApi = createApi({
 export const {
     useCreateProjectMutation,
     useGetProjectsQuery,
+    useGetTargetProjectQuery,
     useUpdateProjectMutation,
     useDeleteProjectMutation
 } = projectApi
