@@ -1,9 +1,9 @@
 import React from 'react'
 import style from './Project.module.css'
-import {Link} from 'react-router-dom'
-import {ProjectI} from '../api/projectService'
+import {NavLink} from 'react-router-dom'
+import {IProject} from '../../models/IProject'
 
-const Project: React.FC<ProjectI> = ({
+const Project: React.FC<IProject> = ({
         project_id,
         project_name,
         description, 
@@ -22,8 +22,8 @@ const Project: React.FC<ProjectI> = ({
     changeDateFormat(end_date)
 
     return (
-        <Link to={"project"}>
-            <article className={style.article}>
+        <NavLink to={`/project/${project_id}`}>
+            <article className={style.Project}>
                 <h3>{project_name}</h3>
                 <p>{description}</p>
                 <div className={style.dates}>
@@ -31,7 +31,7 @@ const Project: React.FC<ProjectI> = ({
                     <p>{changeDateFormat(end_date)}</p>
                 </div>
             </article>
-        </Link>
+        </NavLink>
     )
 }
 

@@ -1,4 +1,4 @@
-article {
+.Project {
     width: 300px;
     height: 250px;
     border: 5px solid #ECF0F1;
@@ -7,7 +7,7 @@ article {
     margin: 10px;
 }
 
-article:hover {
+.Project:hover {
     border-color: #3498DB;
     transform: scale(1.02);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);

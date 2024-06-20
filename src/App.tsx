@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
-import NavigationMenu from './components/NavigationMenu'
+import NavigationMenu from './components/NavigationMenu/NavigationMenu'
 import HomePage from "./pages/HomePage"
 import ProjectPage from "./pages/ProjectPage"
 
@@ -12,7 +12,7 @@ const App = () => {
             <NavigationMenu />
             <Routes>
                 <Route path="/" element={<HomePage/>}/>
-                <Route path="/project" element={<ProjectPage/>}/>
+                <Route path="/project/:projectId" element={<ProjectPage/>}/>
             </Routes>
         </div>
     )
