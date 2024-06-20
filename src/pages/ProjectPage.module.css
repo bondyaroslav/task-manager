@@ -1,0 +1,19 @@
+.ProjectPage {
+    display: flex;
+    flex-direction: column;
+}
+
+.projectName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 60px;
+    background-color: #ECF0F1;
+    border-radius: 15px;
+    margin: 20px;
+
+    p {
+        font-size: 18px;
+    }
+}
