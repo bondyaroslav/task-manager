@@ -1,12 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
-
-export interface IProject {
-    id: number,
-    name: string,
-    description: string,
-    startDate: string,
-    endDate: string
-}
+import {IProject} from '../../models/IProject'
 
 interface InitialProjectState {
     projects: IProject[]
@@ -27,7 +20,7 @@ const projectSlice = createSlice({
             state.projects.push(action.payload)
         },
         updateProject(state, action) {
-            const index = state.projects.findIndex(project => project.id === action.payload.id)
+            const index = state.projects.findIndex(project => project.project_id === action.payload.id)
             if (index !== -1) {
                 state.projects[index] = action.payload
             }
