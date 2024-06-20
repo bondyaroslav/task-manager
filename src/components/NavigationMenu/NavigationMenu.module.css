@@ -1,4 +1,6 @@
-.header {
+.NavigationMenu {
+    display: flex;
+    align-items: center;
     height: 100px;
     background-color: #2C3E50;
 }

@@ -9,6 +9,10 @@ const ProjectPage = () => {
     const {projectId} = useParams()
     const {data: tasksData} = taskApi.useGetTasksFromTargetProjectQuery({id: projectId, queryParam: ''})
     const {data: projectData} = projectApi.useGetTargetProjectQuery({id: projectId})
+
+    if(!projectData) {
+        return <h1></h1>
+    }
     
     return (
         <section className={style.ProjectPage}>
