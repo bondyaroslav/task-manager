@@ -11,15 +11,21 @@ const NavigationMenu = () => {
 
     const NavItem: React.FC<NavItemProps> = ({to, name}) => {
         return (
-            <Button style={{
+            <Link to={`/${to}`} style={{
                 width: 150,
                 height: "70%",
-                backgroundColor: "#ECF0F1",
-                borderRadius: 15,
                 marginLeft: 10
             }}>
-                <Link to={`/${to}`}>{name}</Link>
-            </Button>
+                <Button style={{
+                    width: "100%",
+                    height: "100%",
+                    backgroundColor: "#ECF0F1",
+                    borderRadius: 15,
+                    color: "black"
+                }}>
+                    {name}
+                </Button>
+            </Link>
         )
     }
 
@@ -29,7 +35,7 @@ const NavigationMenu = () => {
             alignItems: "center"
         }}>
             <NavItem to={""} name={"Home"}/>
-            <NavItem to={"tasks"} name={"Tasks"}/>
+            <NavItem to={"project"} name={"Project"}/>
         </header>
     )
 }
