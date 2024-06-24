@@ -7,7 +7,6 @@ const NavigationMenu = () => {
     return (
         <header className={style.NavigationMenu}>
             <NavItem to={""} name={"Home"}/>
-            <NavItem to={"project"} name={"Project"}/>
         </header>
     )
 }
