@@ -3,7 +3,7 @@ import Task from './Task'
 import {ITask} from '../models/ITask'
 import style from './TaskTable.module.css'
 import AddButton from './AddButton'
-import {taskApi, useCreateTaskMutation} from '../api/taskService'
+import {taskApi, useCreateTaskMutation, useDeleteTaskMutation} from '../api/taskService'
 import {Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField } from '@mui/material'
 
 interface TaskTableProps {
@@ -48,7 +48,7 @@ const TaskTable: React.FC<TaskTableProps> = ({tasks}) => {
             <p className={style.tableName}>Table Name</p>
             <ul>
                 {tasks ? tasks.map((task: ITask) => (
-                    <Task key={task.task_id} name={task.task_name}/>
+                    <Task key={task.task_id} id={task.task_id} name={task.task_name} />
                 )) : null}
             </ul>
             <AddButton onClick={handleClickOpen}/>
