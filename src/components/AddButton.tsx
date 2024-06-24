@@ -10,14 +10,14 @@ interface AddButtonProps {
 const AddButton: React.FC<AddButtonProps> = ({ onClick }) => {
     return (
         <IconButton style={{
-            width: 100,
-            height: 100
+            width: 50,
+            height: 50
         }}
                     onClick={onClick}
         >
             <AddIcon sx={{
-                width: 50,
-                height: 50
+                width: 30,
+                height: 30
             }}/>
         </IconButton>
     )
